@@ -13,23 +13,27 @@ module.exports = {
         'teal': colors.teal,
         'amber': colors.amber,
         'emerald': colors.emerald,
+        
       },
       backgroundImage: theme => ({
         'bg-main-img': "url('/images/background.jpg')",
         'login-img': "url('/images/loginimg.jpg')",
         'signup-img': "url('/images/signupimg.jpg')",
-        'logo-img': "url('/images/madlogo.jpg')",
+        'logo-img': "url('/images/bangslogo.png')",
         'logo-img1': "url('/images/madlogo1.jpg')",
         'logo-img-transparent': "url('/images/madlogotransparent.png')"
       }),
        fontFamily: {
-         'body': 'Comfortaa',
+         'body': 'Montserrat',
        },
       
     },
   },
   variants: {
-    extend: {},
+    scale: ['responsive', 'hover', 'focus', 'active', 'group-hover'],
+    extend: {
+      borderStyle: ['hover', 'focus'],
+    },
   },
   plugins: [],
 }
