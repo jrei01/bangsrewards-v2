@@ -19,7 +19,7 @@ module.exports = {
         'bg-main-img': "url('/images/background.jpg')",
         'login-img': "url('/images/loginimg.jpg')",
         'signup-img': "url('/images/signupimg.jpg')",
-        'logo-img': "url('/images/bangslogo.png')",
+        'logo-img': "url('/images/rewardslogotransparent.png')",
         'logo-img1': "url('/images/madlogo1.jpg')",
         'logo-img-transparent': "url('/images/madlogotransparent.png')"
       }),
@@ -30,7 +30,7 @@ module.exports = {
     },
   },
   variants: {
-    scale: ['responsive', 'hover', 'focus', 'active', 'group-hover'],
+    scale: ['responsive', 'hover', 'focus', 'active', 'group-hover', 'group-focus'],
     extend: {
       borderStyle: ['hover', 'focus'],
     },
