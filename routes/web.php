@@ -14,8 +14,13 @@ use App\Http\Livewire\Auth\Activate;
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/activate', Activate::class)->name('activate');
+
+
+Route::middleware('guest')->group(function() {
+    Route::get('/activate', Activate::class)->name('activate');
+});

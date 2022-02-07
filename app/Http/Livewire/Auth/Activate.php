@@ -3,20 +3,23 @@
 namespace App\Http\Livewire\Auth;
 
 use App\Models\User;
+use App\Models\Member;
 use Livewire\Component;
 use Illuminate\Support\Facades\Hash;
 
 class Activate extends Component
 {
 
+    public $activated = false;
     public $firstName = '';
     public $lastName = '';
-    // public $gender = '';
-    // public $city = '';
+    public $gender = '';
+    public $city = '';
     public $mobile = '';
-    // public $birthDate = '';
+    public $birthDate = '';
     public $cardNumber = '';
     public $email = '';
+ 
     
     
     public function updatedEmail()
@@ -26,6 +29,17 @@ class Activate extends Component
 
     }
 
+    public function updated($field)
+    {
+
+        if ($field !== 'activated') {
+            $this->activated = false;
+        }
+
+    }
+
+   
+
 
     public function activate ()
     {
@@ -34,27 +48,57 @@ class Activate extends Component
 
             'firstName' => 'required',
             'lastName' => 'required',
-            'mobile' => 'required|numeric',
+            'gender' => 'required',
+            'city' => 'required',
+            'mobile' => 'required|numeric|unique:users',
+            'birthDate' => 'required',
             'email' => 'required|email|unique:users',
 
         ]);
+
+        //Generate cardNumber if none
+        if ($this->cardNumber == '') {
+            $this->cardNumber = $this->generateCardNumber();
+        }
 
         User::create([
 
             'firstname' => $this->firstName,
             'lastname' => $this->lastName,
-            // 'gender' => $this->gender,
-            // 'city' => $this->city,
             'mobile' => $this->mobile,
-            // 'birthDate' => $this->birthDate,
             'cardNumber' => $this->cardNumber,
             'email' => $this->email,
             'password' => Hash::make('123456'),
 
         ]);
 
-        return redirect('/');
-        
+        Member::create([
+
+            'firstName' => $this->firstName,
+            'lastName' => $this->lastName,
+            'gender' => $this->gender,
+            'city' => $this->city,
+            'mobileNumber' => $this->mobile,
+            'birthDate' => $this->birthDate,
+            'birthDate' => date('Y-m-d', strtotime($this->birthDate)),
+            'cardNumber' => $this->cardNumber,
+            'emailAddress' => $this->email,
+            'pinNumber' => Hash::make('123456'),
+            'membertype' => 0,
+
+           
+
+        ]);
+
+        $this->activated = true;
+    
+    }
+
+    private function generateCardNumber()
+    {
+      $member = Member::where('cardNumber', '>=', 1000000)->orderBy('memberId', 'DESC')->first();
+      $cardnumber = $member->cardNumber + 1;
+      return $cardnumber;
     }
 
     public function render()

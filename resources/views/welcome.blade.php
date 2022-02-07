@@ -38,7 +38,7 @@
                     <a href="#" class="pt-4 transform hover:text-amber-400 focus:text-amber-400 focus:border-b cursor-pointer transition ease-in-out duration-400 relative group">CHECK BALANCE
                         <div class="absolute sm:w-full h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 group-focus:scale-x-100 translate-transform transition ease-in-out duration-500"></div>
                     </a>
-                    <a href="#" class="pt-4 transform hover:text-amber-400 focus:text-amber-400 cursor-pointer transition ease-in-out duration-400 relative group">ACTIVATE
+                    <a href="/activate" class="pt-4 transform hover:text-amber-400 focus:text-amber-400 cursor-pointer transition ease-in-out duration-400 relative group">ACTIVATE
                         <div class="absolute sm:w-full h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 group-focus:scale-x-100 translate-transform transition ease-in-out duration-500"></div>
                     </a>
                     <a href="#" class="pt-4 transform hover:text-amber-400 focus:text-amber-400 cursor-pointer transition ease-in-out duration-400 relative group">HOW TO ENJOY
@@ -63,9 +63,9 @@
                         </div>
                         <div  class="flex flex-col items-center h-2/4 w-4/5 sm:w-96 md:w-1/2  pl-2 pr-2">
                             <img class="mt-4 w-full h-full rounded-lg opacity-80 hover:opacity-100 transition ease-in-out duration-500" src="/images/rewardscard.png" alt="">
-                            <div class="w-full flex flex-row space-x-4">
-                                <button class="w-1/2 h-12 mt-3 border border-white text-xs text-white hover:shadow-lg hover:text-amber-400 hover:border-amber-400 hover:bg-gray-600 bg-opacity-30 transition ease-in-out duration-500">ACTIVATE</button>
-                                <button class="w-1/2 h-12 mt-3 border border-white text-xs text-white hover:shadow-lg hover:text-amber-400 hover:border-amber-400 hover:bg-gray-600 bg-opacity-30 transition ease-in-out duration-500">CHECK BALANCE</button>
+                            <div class="w-full flex flex-row space-x-4">                                
+                                <button class="w-1/2 h-12 mt-3 border border-white text-xs text-white hover:shadow-lg hover:text-amber-400 hover:border-amber-400 bg-gray-800 hover:bg-gray-600 bg-opacity-70 transition ease-in-out duration-500">ACTIVATE</button>
+                                <button class="w-1/2 h-12 mt-3 border border-white text-xs text-white hover:shadow-lg hover:text-amber-400 hover:border-amber-400 bg-gray-800 hover:bg-gray-600 bg-opacity-70 transition ease-in-out duration-500">CHECK BALANCE</button>
                             </div>
                         </div>
                     </div>    

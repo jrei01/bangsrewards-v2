@@ -13,7 +13,7 @@
         <!-- Styles -->
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
-        <!-- Alphine -->
+        <!-- Alpine -->
         <script defer src="https://unpkg.com/alpinejs@3.8.1/dist/cdn.min.js"></script>
        
         <!-- Scripts -->
