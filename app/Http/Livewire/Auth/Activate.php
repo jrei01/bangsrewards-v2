@@ -10,7 +10,6 @@ use Illuminate\Support\Facades\Hash;
 class Activate extends Component
 {
 
-    public $activated = false;
     public $firstName = '';
     public $lastName = '';
     public $gender = '';
@@ -28,17 +27,7 @@ class Activate extends Component
         $this->validate(['email' => 'unique:users']);
 
     }
-
-    public function updated($field)
-    {
-
-        if ($field !== 'activated') {
-            $this->activated = false;
-        }
-
-    }
-
-   
+ 
 
 
     public function activate ()
@@ -90,7 +79,8 @@ class Activate extends Component
 
         ]);
 
-        $this->activated = true;
+        $this->emitSelf('notify-saved');
+
     
     }
 
