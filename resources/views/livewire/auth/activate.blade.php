@@ -55,6 +55,7 @@
                <a href="" class="text-white mt-2">TERMS & CONDITIONS</a>
                <button class="w-80 h-10 mt-6 border border-white text-xs text-white hover:shadow-lg hover:text-amber-400 hover:border-amber-400 bg-gray-800 hover:bg-gray-600 bg-opacity-70 transition ease-in-out duration-500">ACTIVATE</button>
             </div>
+         </div>
       </form>
    </div>
 </div>

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Auth\Activate;
+use App\Http\Livewire\Activities;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,5 +24,5 @@ Route::get('/', function () {
 
 Route::middleware('guest')->group(function() {
     Route::get('/activate', Activate::class)->name('activate');
-    // Route::get('/login', Login::class)->name('login');
+    Route::get('/activities', Activities::class)->name('activity');
 });
