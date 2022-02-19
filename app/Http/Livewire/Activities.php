@@ -17,6 +17,8 @@ class Activities extends Component
 
     public $cardNumber = null;
     public $points = null;
+    public $sortField = 'activities.updated_at';
+    public $sortDirection = 'desc';
     
 
     private function getPoints()
@@ -26,6 +28,20 @@ class Activities extends Component
         foreach ($member_points as $point) {
            return $point->points;
         }
+    }
+
+
+    public function sortBy($field)
+    {
+
+        if ($this->sortField === $field) {
+            $this->sortDirection = $this->sortDirection === 'desc' ? 'asc' : 'desc';
+        } else {
+            $this->sortDirection = 'desc';
+        }
+
+        $this->sortField = $field;
+
     }
 
     public function render()
@@ -42,7 +58,7 @@ class Activities extends Component
                             ->leftjoin('actpreloaddetails', 'activities.transactionId', '=', 'actpreloaddetails.transaction_id')
                             ->leftjoin('actearndetails', 'activities.transactionId', '=', 'actearndetails.transaction_id')
                             ->where('activities.cardNumber', '=',  $this->cardNumber)
-                            ->orderby('activities.updated_at', 'DESC')
+                            ->orderby($this->sortField, $this->sortDirection)
                             ->paginate(5),
                 
                 

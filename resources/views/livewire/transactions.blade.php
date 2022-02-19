@@ -18,7 +18,7 @@
 
 
 
-      <div class="border-b border-gray-600 font-normal leading-relaxed tracking-wide opacity-90 hover:opacity-100 space-y-2 m-2 mt-6">
+      <div class="font-normal leading-relaxed tracking-wide opacity-90 hover:opacity-100 space-y-2 m-2 mt-6">
          <p class="text-xl text-white">TRANSACTIONS</p>
              
       </div>
@@ -28,10 +28,10 @@
 
             <x-slot name="head">
 
-               <x-table.heading>Branch</x-table.heading>
-               <x-table.heading>Type</x-table.heading>
-               <x-table.heading>Amount</x-table.heading>
-               <x-table.heading>Date</x-table.heading>       
+               <x-table.heading sortable wire:click="sortBy('branches.branch_name')" :direction="$sortField === 'branches.branch_name' ? $sortDirection : null">Branch</x-table.heading>
+               <x-table.heading sortable wire:click="sortBy('activities.transactionType')" :direction="$sortField === 'activities.transactionType' ? $sortDirection : null">Type</x-table.heading>
+               <x-table.heading sortable >Amount</x-table.heading>
+               <x-table.heading sortable wire:click="sortBy('activities.updated_at')" :direction="$sortField === 'activities.updated_at' ? $sortDirection : null">Date</x-table.heading>       
 
             </x-slot>
 
