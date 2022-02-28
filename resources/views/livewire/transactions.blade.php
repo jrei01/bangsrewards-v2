@@ -16,11 +16,8 @@
             </div>
       </div>
 
-
-
       <div class="font-normal leading-relaxed tracking-wide opacity-90 hover:opacity-100 space-y-2 m-2 mt-6">
          <p class="text-xl text-white">TRANSACTIONS</p>
-             
       </div>
 
       <div class="flex flex-col space-y-2 m-2">
@@ -38,37 +35,35 @@
             <x-slot name="body">
 
                @foreach ($activities as $activity)
-               <x-table.row>
-                  
-                  <x-table.cell>{{ $activity->branch_name }}</x-table.cell>
-                  <x-table.cell>{{ ucfirst(trans($activity->transactionType)) }}</x-table.cell>
-
-                  @if ($activity->transactionType === 'earn')
-                     <x-table.cell>{{ $activity->earnPoints }}</x-table.cell>
+                  <x-table.row>
                      
-                  @elseif ($activity->transactionType === 'redeem')
+                     <x-table.cell>{{ $activity->branch_name }}</x-table.cell>
 
-                     <x-table.cell>
+                     <x-table.cell>{{ ucfirst(trans($activity->transactionType)) }}</x-table.cell>
+
+                     @if ($activity->transactionType === 'earn')
+
+                        <x-table.cell>{{ $activity->earnPoints }}</x-table.cell>
                         
-                        {{ $activity->redeemPoints }}
-                    
-                     
-                     </x-table.cell>
-                     
-                  @elseif ($activity->transactionType === 'preload')
-                     <x-table.cell>{{ $activity->preloadPoints }}</x-table.cell>
-                     
-                  @endif
-                  
-                  <x-table.cell>{{ date('M, j Y', strtotime($activity->created_at)) }}</x-table.cell>
-                  
-               </x-table.row>
-               @endforeach
+                     @elseif ($activity->transactionType === 'redeem')
 
-               
+                        <x-table.cell>{{ $activity->redeemPoints }}</x-table.cell>
+                        
+                     @elseif ($activity->transactionType === 'preload')
+
+                        <x-table.cell>{{ $activity->preloadPoints }}</x-table.cell>
+                        
+                     @endif
+                  
+                     <x-table.cell>{{ date('M, j Y', strtotime($activity->created_at)) }}</x-table.cell>
+                     
+                  </x-table.row>
+               @endforeach
+           
             </x-slot>
             
          </x-table>
+         
          {{ $activities->links() }}
          
       </div>
