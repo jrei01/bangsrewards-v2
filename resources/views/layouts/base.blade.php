@@ -36,10 +36,10 @@
                             sm:bg-transparent ml-4 mr-4 mb-4 pl-4 pr-4 pb-4 sm:m-0 sm:items-center h-42 sm:h-12 sm:text-center 
                             sm:space-x-9 md:space-x-14  opacity-100 scale-0 sm:scale-100 transform origin-top-left"
                     :class="navOpen ? 'scale-100 origin-top-left' : 'scale-0 opacity-0 origin-top-left' "> 
-                    <a href="#" class="pt-4 transform hover:text-amber-400 focus:text-amber-400 focus:border-b cursor-pointer transition ease-in-out duration-400 relative group">CHECK BALANCE
+                    <a href="{{ route('activities') }}" class="pt-4 transform hover:text-amber-400 focus:text-amber-400 focus:border-b cursor-pointer transition ease-in-out duration-400 relative group">CHECK BALANCE
                         <div class="absolute sm:w-full h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 group-focus:scale-x-100 translate-transform transition ease-in-out duration-500"></div>
                     </a>
-                    <a href="#" class="pt-4 transform hover:text-amber-400 focus:text-amber-400 cursor-pointer transition ease-in-out duration-400 relative group">ACTIVATE
+                    <a href="{{ route('activate') }}" class="pt-4 transform hover:text-amber-400 focus:text-amber-400 cursor-pointer transition ease-in-out duration-400 relative group">ACTIVATE
                         <div class="absolute sm:w-full h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 group-focus:scale-x-100 translate-transform transition ease-in-out duration-500"></div>
                     </a>
                     <a href="#" class="pt-4 transform hover:text-amber-400 focus:text-amber-400 cursor-pointer transition ease-in-out duration-400 relative group">HOW TO ENJOY

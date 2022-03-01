@@ -24,5 +24,5 @@ Route::get('/', function () {
 
 Route::middleware('guest')->group(function() {
     Route::get('/activate', Activate::class)->name('activate');
-    Route::get('/activities', Activities::class)->name('activity');
+    Route::get('/activities', Activities::class)->name('activities');
 });
