@@ -93,7 +93,6 @@ class Activate extends Component
 
     public function render()
     {
-        return view('livewire.auth.activate')
-            ->layout('layouts.app');
+        return view('livewire.auth.activate');       
     }
 }
