@@ -80,6 +80,7 @@ class Activate extends Component
         ]);
 
         $this->emitSelf('notify-saved');
+        $this->reset();
 
     
     }
