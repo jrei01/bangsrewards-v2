@@ -39,6 +39,7 @@ class Activate extends Component
             'lastName' => 'required',
             'gender' => 'required',
             'city' => 'required',
+            'cardNumber' => 'required|numeric|digit:6',
             'mobile' => 'required|numeric|unique:users',
             'birthDate' => 'required',
             'email' => 'required|email|unique:users',

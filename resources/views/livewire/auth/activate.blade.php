@@ -40,7 +40,7 @@
                <x-input.text wire:model="birthDate" id="birthdate" type="date" placeholder="Enter your birthday" />
             </x-input.group>
             
-            <x-input.group label="CARD NUMBER" for="cardnumber" >
+            <x-input.group label="CARD NUMBER" for="cardnumber" :error="$errors->first('cardNumber')">
                <x-input.text wire:model="cardNumber" id="cardnumber" type="text" placeholder="Enter your card number (optional)" />
             </x-input.group>
 
