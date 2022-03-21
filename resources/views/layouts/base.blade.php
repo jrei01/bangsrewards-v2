@@ -25,8 +25,8 @@
         @livewireStyles
 
     </head>
-    <body class="antialiased flex flex-wrap flex-col w-full h-full sm:h-screen font-body bg-bg-main-img bg-no-repeat bg-cover" x-data="{navOpen: false}">
-        <div class="w-full bg-black opacity-90  h-full sm:h-screen">
+    <body class="antialiased flex flex-wrap flex-col w-full h-max 2xl:h-full font-body bg-bg-main-img bg-no-repeat bg-cover" x-data="{navOpen: false}">
+        <div class="w-full bg-black opacity-90 h-max 2xl:h-screen">
             <nav class="max-w-3xl mx-auto  flex inline-flex flex-col mb-0 fixed inset-x-0 sm:flex-row w-full flex-wrap justify-center bg-transparent"
                 :class="navOpen ? 'z-10' : '' ">
                 <button class="pt-3 pl-4 w-8 sm:w-0 sm:pt-0 opacity-100 sm:opacity-0 text-white items-center hover:text-amber-400 transition ease-in-out duration-600"

@@ -1,6 +1,6 @@
 <x-layouts.base>
         
-    <div class="max-w-3xl mx-auto h-full sm:h-screen z-0"> 
+    <div class="max-w-3xl mx-auto h-max z-0"> 
 
         <div class="w-full">
             <div class="flex justify-center pt-20 flex-col w-full h-full items-center">
