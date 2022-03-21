@@ -26,12 +26,12 @@
             <p class="text-white items-center text-md sm:text-lg text-amber-400">PARTNERS</p>
             <div class="flex flex-row justify-center w-3/5 h-20 sm:h-20  space-x-5 sm:space-x-10 sm:mt-0 items-center">
                 <div class="h-12 sm:h-12 opacity-80 hover:opacity-100 w-32 sm:w-40">
-                    <a href="">
+                    <a href="https://www.bangsprimesalonbytonyandjackey.com/" target="_blank">
                         <img src="/images/bangsprimelogo.png" alt="">
                     </a>   
                 </div>    
                 <div class="h-12 sm:h-12 opacity-80 hover:opacity-100 w-32 pt-1 sm:pt-4 sm:w-40">
-                    <a href="">
+                    <a href="https://www.bangsprimesalonbytonyandjackey.com/" target="_blank">
                         <img src="/images/tonyandjackeylogo.png" alt="">
                     </a>
                 </div>
@@ -47,18 +47,18 @@
             <p class="text-white items-center text-xs text-white">SOCIAL MEDIA</p>
             <div class="flex flex-row justify-center w-1/2 h-20 sm:h-20 space-x-5 sm:space-x-10 items-center">    
                 <div class="h-6  opacity-80 hover:opacity-100 w-6">
-                    <a href="">
+                    <a href="https://www.facebook.com/bangstnj" target="_blank">
                         <img src="/images/fbicon.png" alt="">
                     </a>   
                 </div>
                 <div class="h-6  opacity-80 hover:opacity-100 w-6">
-                    <a href="">
-                        <img src="/images/instagrapicon.png" alt="">
+                    <a href="https://www.instagram.com/bangstnj" target="_blank">
+                        <img src="/images/instagramicon.png" alt="">
                     </a>
                 </div>
                 <div class="h-6  opacity-80 hover:opacity-100 w-6">
-                    <a href="http://www.tandjsalon.com/" target="_blank">
-                        <img src="/images/twittericon.png" alt="">
+                    <a href="https://www.youtube.com/c/BangsPrimeSalon" target="_blank">
+                        <img src="/images/youtubeicon.png" alt="">
                     </a>
                 </div>
             </div>
