@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Models\Member;
 use Livewire\Component;
 use Illuminate\Support\Facades\Hash;
+use Validator;
 
 class Activate extends Component
 {
@@ -39,7 +40,7 @@ class Activate extends Component
             'lastName' => 'required',
             'gender' => 'required',
             'city' => 'required',
-            'cardNumber' => 'required|numeric|digit:6',
+            'cardNumber' => 'required|numeric|digits:6',
             'mobile' => 'required|numeric|unique:users',
             'birthDate' => 'required',
             'email' => 'required|email|unique:users',

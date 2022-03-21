@@ -1,6 +1,6 @@
 <x-layouts.base>
         
-    <div class="max-w-3xl mx-auto h-screen z-0"> 
+    <div class="max-w-3xl mx-auto h-full sm:h-screen z-0"> 
 
         <div class="w-full">
             <div class="flex justify-center pt-20 flex-col w-full h-full items-center">
@@ -13,7 +13,7 @@
                     <p><a class="text-amber-400" href="">BANGS REWARDS</a> is a loyalty program that GRANTS 5% of the total amount spent to be earn as points that can be redeem as service or product at Bangs Prime Salon, Tony & Jackey, and T&J Salon Professionals.</p>
                 </div>
                 <div  class="flex flex-col items-center h-2/4 w-4/5 sm:w-96 md:w-1/2  pl-2 pr-2">
-                    <img class="mt-4 w-full h-full rounded-lg opacity-80 hover:opacity-100 transition ease-in-out duration-500" src="/images/rewardscard.png" alt="">
+                    <img class="mt-4 w-full h-full rounded-lg opacity-95 hover:opacity-100 transition ease-in-out duration-500" src="/images/rewardscard.png" alt="">
                     <div class="w-full flex flex-row space-x-4">                                
                         <a href="{{ route('activate') }}" class="w-1/2 h-12 mt-3 border border-white text-xs text-center pt-4 text-white hover:shadow-lg hover:text-amber-400 hover:border-amber-400 bg-gray-800 hover:bg-gray-600 bg-opacity-70 transition ease-in-out duration-500">ACTIVATE</a>
                         <a href="{{ route('activities') }}" class="w-1/2 h-12 mt-3 border border-white text-xs text-center pt-4 text-white hover:shadow-lg hover:text-amber-400 hover:border-amber-400 bg-gray-800 hover:bg-gray-600 bg-opacity-70 transition ease-in-out duration-500">CHECK BALANCE</a>

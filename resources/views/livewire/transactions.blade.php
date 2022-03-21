@@ -1,10 +1,10 @@
-<div class="flex flex-wrap justify-center items-center max-w-3xl mx-auto h-full"> 
+<div class="flex flex-wrap justify-center items-center max-w-3xl mx-auto h-screen"> 
    <div class="w-full h-4/5 m-5 p-4">
       
       <div class="flex flex-wrap flex-row justify-between text-xs m-2 pb-6 font-normal leading-relaxed tracking-widest mt-6 opacity-90">
          <div class="flex flex-col  w-1/2">
             <label for="cardnumber" class="text-amber-400">CARD NUMBER</label>
-            <input wire:model="cardNumber" class="h-12 w-full px-4 text-white text-center border bg-transparent outline-none text-2xl bg-gray-600 border-amber-400" placeholder="Enter your Card Number">
+            <input wire:model.debounce="cardNumber" class="h-12 w-full px-4 text-white text-center border bg-transparent outline-none text-2xl bg-gray-600 border-amber-400" placeholder="Enter your Card Number">
          </div>
          <div class="flex flex-col w-2/5 ">
             <label for="points" class="w-full text-amber-400 text-center">CURRENT POINTS</label>
