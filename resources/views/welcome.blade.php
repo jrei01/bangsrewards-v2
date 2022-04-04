@@ -15,8 +15,8 @@
                 <div  class="flex flex-col items-center h-2/4 w-4/5 sm:w-96 md:w-1/2  pl-2 pr-2">
                     <img class="mt-4 w-full h-full rounded-lg opacity-95 hover:opacity-100 transition ease-in-out duration-500" src="/images/rewardscard.png" alt="">
                     <div class="w-full flex flex-row space-x-4">                                
-                        <a href="{{ route('activate') }}" class="w-1/2 h-12 mt-3 border border-white text-xs text-center pt-4 text-white hover:shadow-lg hover:text-amber-400 hover:border-amber-400 bg-gray-800 hover:bg-gray-600 bg-opacity-70 transition ease-in-out duration-500">ACTIVATE</a>
-                        <a href="{{ route('activities') }}" class="w-1/2 h-12 mt-3 border border-white text-xs text-center pt-4 text-white hover:shadow-lg hover:text-amber-400 hover:border-amber-400 bg-gray-800 hover:bg-gray-600 bg-opacity-70 transition ease-in-out duration-500">CHECK BALANCE</a>
+                        <a href="{{ route('activate') }}" class="w-1/2 h-12 mt-3 border border-gray-600 text-xs text-center pt-4 text-white hover:shadow-lg hover:text-amber-400 hover:border-amber-400 bg-gray-800 hover:bg-gray-600 bg-opacity-70 transition ease-in-out duration-500">ACTIVATE</a>
+                        <a href="{{ route('activities') }}" class="w-1/2 h-12 mt-3 border border-gray-600 text-xs text-center pt-4 text-white hover:shadow-lg hover:text-amber-400 hover:border-amber-400 bg-gray-800 hover:bg-gray-600 bg-opacity-70 transition ease-in-out duration-500">CHECK BALANCE</a>
                     </div>
                 </div>
             </div>    

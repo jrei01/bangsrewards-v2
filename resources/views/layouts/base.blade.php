@@ -25,17 +25,17 @@
         @livewireStyles
 
     </head>
-    <body class="antialiased flex flex-wrap flex-col w-full h-max 2xl:h-full font-body bg-bg-main-img bg-no-repeat bg-cover" x-data="{navOpen: false}">
+    <body class="antialiased flex flex-wrap flex-col w-full h-max 2xl:h-full font-body bg-bg-main-img bg-no-repeat bg-fixed bg-cover" x-data="{navOpen: false}">
         <div class="w-full bg-black opacity-90 h-max 2xl:h-screen">
-            <nav class="max-w-3xl mx-auto  flex inline-flex flex-col mb-0 fixed inset-x-0 sm:flex-row w-full flex-wrap justify-center bg-transparent"
+            <nav class="max-w-screen mx-auto  flex inline-flex flex-col mb-0 fixed inset-x-0 sm:flex-row w-full flex-wrap justify-center sm:bg-gray-900 sm:bg-opacity-70 z-10"
                 :class="navOpen ? 'z-10' : '' ">
-                <button class="pt-3 pl-4 w-8 sm:w-0 sm:pt-0 opacity-100 sm:opacity-0 text-white items-center hover:text-amber-400 transition ease-in-out duration-600"
+                <button class="pt-3 pl-4 w-8 sm:w-0 sm:pt-0 sm:hidden opacity-100 sm:opacity-0 text-white items-center hover:text-amber-400 transition ease-in-out duration-600 focus:outline-none"
                         x-on:click="navOpen  = ! navOpen">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                     </svg> 
                 </button>
-                <div class="flex flex-wrap inline-flex flex-auto text-white text-xs rounded-md justify-center flex-col sm:flex-row items-left bg-gray-600 bg-opacity-90
+                <div class="flex flex-wrap inline-flex flex-auto text-white text-xs rounded-md sm:rounded-none justify-center flex-col sm:flex-row items-left bg-gray-700 bg-opacity-90 sm:border-b border-gray-700 
                             sm:bg-transparent ml-4 mr-4 mb-4 pl-4 pr-4 pb-4 sm:m-0 sm:items-center h-42 sm:h-12 sm:text-center 
                             sm:space-x-9 md:space-x-14  opacity-100 scale-0 sm:scale-100 transform origin-top-left"
                     :class="navOpen ? 'scale-100 origin-top-left' : 'scale-0 opacity-0 origin-top-left' "> 
